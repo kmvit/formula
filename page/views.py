@@ -25,7 +25,8 @@ def programm(request):
     formy = request.GET['y']
     g = re.findall('(\d+)', formy)
     g = ', '.join(g)
-    y = eval('sin(x*' + g + ')')
+    y = request.GET['y']
+    #y = eval('sin(x*' + g + ')')
     ax.plot(x, y)
 
     buffer = BytesIO()
