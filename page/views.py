@@ -22,10 +22,10 @@ def programm(request):
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
     x = np.linspace(-5, 5, 100)
-    formy = request.GET['y']
-    g = re.findall('(\d+)', formy)
-    g = ', '.join(g)
-    y = request.GET['y']
+    #formy = request.GET['y']
+    #g = re.findall('(\d+)', formy)
+    #g = ', '.join(g)
+    y = eval(request.GET['y'])
     #y = eval('sin(x*' + g + ')')
     ax.plot(x, y)
 
